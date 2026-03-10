@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+  </head>
+  <body>
+    <h1 align="center">xn=xn-1+xn-2</h1>
+    <h2 align="center">1,288,191,304</h2>
+    <br /><br />
+    <button onclick="hint()">Hint?:</button>
+    <p id="hints"></p>
+    <br />
+    <form id="Answer">
+      Answer: <input type="text" name="fname" /><br />
+    </form>
+
+    <br /><br />
+    <button onclick="myFunction()">Check your Answer</button>
+
+    <p id="output"></p>
+    <a id="correct"></a>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById('Answer');
+        var text = x.elements[0].value;
+
+        if (text == 'Layers' || text == 'layers' || text == 'LAYERS') {
+          var tag = document.createElement('A');
+          var t = document.createTextNode('Great Job!');
+          tag.setAttribute('href', 'solved.html');
+          tag.appendChild(t);
+          document.body.appendChild(tag);
+        } else {
+          document.getElementById('output').innerHTML =
+            'Sorry Please Try Again';
+        }
+      }
+
+      function hint() {
+        document.getElementById('hints').innerHTML = '36';
+      }
+    </script>
+  </body>
+</html>
